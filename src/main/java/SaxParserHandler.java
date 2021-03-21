@@ -3,8 +3,6 @@ import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
-import java.util.ArrayList;
-
 public class SaxParserHandler extends DefaultHandler {
     private static final String TAG_ITEM = "item";
     private static final String ATTRIBUTE_CITY = "city";

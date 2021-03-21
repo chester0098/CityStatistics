@@ -1,7 +1,8 @@
 import entities.Floors;
 import entities.Item;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Main implements IMain {
     Map<String, Floors> cityFloors = new HashMap<>();
@@ -29,9 +30,9 @@ public class Main implements IMain {
 
     private void countingRepetitions(Item item) {
         if (itemRepetition.containsKey(item.hashCode())) {
-            Item newItem = itemRepetition.get(item.hashCode());
-            newItem.count += 1;
-            itemRepetition.put(item.hashCode(), newItem);
+            Item updatedItem = itemRepetition.get(item.hashCode());
+            updatedItem.count += 1;
+            itemRepetition.put(item.hashCode(), updatedItem);
         } else {
             item.count = 1;
             itemRepetition.put(item.hashCode(), item);
